@@ -14,10 +14,11 @@ router.get("/getuser", async (req, res) => {
       res.send(user);
     }
   } catch (error) {
-    res.send({
-      code: 500,
-      msg: "Internal Server Error",
-    });
+    throw error;
+    // res.send({
+    //   code: 500,
+    //   msg: "Internal Server Error",
+    // });
   }
 });
 

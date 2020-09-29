@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Table, Button, Modal, Form, FormControl } from "react-bootstrap";
+import { Table, Button, Form, FormControl } from "react-bootstrap";
 import { confirmAlert } from "react-confirm-alert"; // Import
 import "react-confirm-alert/src/react-confirm-alert.css"; // Import css
 import { toast } from "react-toastify";
@@ -26,7 +26,7 @@ function user() {
       user_email: userEmail,
       user_contact: userContact,
     };
-    if (userId != 0) {
+    if (userId !== 0) {
       let updateData = await userInstance.patch(
         `/updatedata/${userId}`,
         payload
